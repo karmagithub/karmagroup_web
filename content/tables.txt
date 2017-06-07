@@ -1,0 +1,149 @@
+//offers table
+create table offers(id int AUTO_INCREMENT PRIMARY key,
+                   title varchar(150),
+                   description text,
+                   addr1 varchar(200),
+                   addr2 varchar(200),
+                   addr3 varchar(200),
+                   terms text,
+                   createdTime timestamp)
+                   
+                   
+//offer images
+create table offerImages(id int AUTO_INCREMENT PRIMARY key,
+                   offerID int,
+                   image text,
+                   createdTime timestamp)
+                   
+//offer inclusions
+create table offerInclusions(id int AUTO_INCREMENT PRIMARY key,
+                   offerID int,
+                   inclusion text,
+                   createdTime timestamp)
+                   
+
+//destination
+create table destination(id int AUTO_INCREMENT PRIMARY key,
+                   name varchar(200),
+                   createdTime timestamp)
+                   
+//destination names
+create table destinationNames(id int AUTO_INCREMENT PRIMARY key,
+                   destinationID int,
+                   name varchar(300),
+                   postID int,
+                   image text,
+                   createdTime timestamp)
+                   
+//karmaGroups
+create table karmaGroups(id int AUTO_INCREMENT PRIMARY key,
+                   name varchar(200),
+                   image text,
+                   bgimage text,
+                   createdTime timestamp)
+                   
+//karmaGroupNames
+create table karmaGroupNames(id int AUTO_INCREMENT PRIMARY key,
+                   karmaID int,
+                   name varchar(200),
+                   postID int,
+                   image text,
+                   bgimage text,
+                   createdTime timestamp)
+
+
+//destinationDetails
+create table destinationDetails(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   title varchar(150),
+                   subTitle varchar(800),             
+                   description text,
+                   amenityDescription text,
+                   accomodationTitle text,
+                   accomodationDescription text,             
+                   address varchar(500),
+                   phone varchar(800),
+                   email varchar(256),
+                   latitude varchar(50),
+                   longitude varchar(50),
+                   galleryPath text,
+                   galleryID int,
+                   createdTime timestamp)
+                   
+//amenities
+create table amenities(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   name varchar(300),
+                   description text,
+                   image text,
+                   option1 varchar(200),
+                   option2 varchar(200),
+                   createdTime timestamp)
+                   
+//accomodation
+create table accomodation(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   name varchar(400),
+                   image text,
+                   description text,
+                   createdTime timestamp)
+                   
+//destinationImages
+create table destinationImages(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   image text,
+                   createdTime timestamp)
+
+//spaDetails
+create table spaDetails(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   title varchar(400),
+                   image text,
+                   description text,
+                   buttonName varchar(400),
+                   link text,
+                   createdTime timestamp)
+                   
+//beachDetails
+create table beachDetails(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   title varchar(400),
+                   image text,
+                   description text,
+                   createdTime timestamp)
+                   
+//botiqueDetails
+create table botiqueDetails(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   title varchar(400),
+                   subTitle text,
+                   image text,
+                   description text,
+                   cost varchar(600),
+                   createdTime timestamp)
+                   
+
+//spaProducts
+create table spaProducts(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   title varchar(400),
+                   description text,
+                   cost varchar(600),
+                   createdTime timestamp)
+                   
+//spaProductImages
+create table spaProductImages(id int AUTO_INCREMENT PRIMARY key,
+				   postID int,
+                   image text,
+                   createdTime timestamp)
+                   
+//countries
+create table countries(id int AUTO_INCREMENT PRIMARY key,name varchar(200),createdTime timestamp)
+
+//mobileCodes
+create table mobileCodes(id int AUTO_INCREMENT PRIMARY key,countryCode varchar(50),countryValue varchar(600),createdTime timestamp)
+
+
+//admin
+create table admin(id int AUTO_INCREMENT PRIMARY key,email varchar(256),password varchar(30),createdTime timestamp)
+

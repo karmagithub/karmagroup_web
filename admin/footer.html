@@ -1,0 +1,38 @@
+ <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+<script>  
+		$( document ).ready(function() {
+			$(".innermenu1").hide();
+			$(".innermenu2").hide();
+			$(".innermenu3").hide();
+			$(".innermenu4").hide();
+			$(".innermenu5").hide();
+			$(".innermenu6").hide();
+		});	 
+		$("#karmaid1").click(function(){
+			$(".innermenu1").toggle("slow");
+		});
+		$("#karmaid2").click(function(){
+				$(".innermenu2").toggle("slow");
+		});
+		$("#karmaid3").click(function(){
+				$(".innermenu3").toggle("slow");
+		});
+		$("#karmaid4").click(function(){
+				$(".innermenu4").toggle("slow");
+		});
+	</script>
+</body>
+
+</html>
